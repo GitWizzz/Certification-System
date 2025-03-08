@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.png'
 export default function CertificatePage() {
   return (
     <div className='w-screen h-screen flex justify-center items-center' style={{ backgroundColor: "#e0e7ee" }}>
-      <div className='w-[400px] h-[400px] bg-white shadow-lg shadow-outline '>
+      <div className='w-[400px] h-[400px] bg-white shadow-lg shadow-outline m-10'>
         <div className='flex justify-center items-center'>
           <div className='m-8 space-y-8'>
             <div className=' flex justify-center'>
