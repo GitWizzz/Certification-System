@@ -12,7 +12,7 @@ export default function CertificatePage() {
             </div>
             <p className='text-2xl flex justify-center'>Verify a Certificate</p>
             <div class="form-group flex-row justify-center">
-              <input className='bg-blue-50  w-full h-8 rounded-md placeholder:text-gray-500 pl-[10px]' type="text" class="form-input" name="serialno" value="" placeholder="Enter Serial Number" required="" />
+              <input style={{border:"1px solid black", borderRadius:"5px", width:"100%", height:"35px",  paddingLeft: "10px"}} type="text" class="form-input" name="serialno" value="" placeholder="Enter Serial Number" required="" />
               <p class="form-input-hint text-gray-500">The serial number can be found at the bottom of each certificate.</p>
             </div>
             <div className='flex justify-end'>
