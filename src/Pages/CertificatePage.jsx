@@ -1,5 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../assets/images/logo.png'
+
+const [Data, setData] = useState(null);
+
+useEffect(() => {
+  fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+     .then((response) => response.json())
+     .then((data) => {
+        console.log(data);
+        setPosts(data);
+     })
+     .catch((err) => {
+        console.log(err.message);
+     });
+}, []);
 
 export default function CertificatePage() {
   return (
