@@ -25,7 +25,6 @@ app.get("/verify/:serial_no", (req, res) => {
     const { serial_no } = req.params;
     db.query("SELECT * FROM certificates WHERE serial_no = ?", [serial_no], (err, result) => {
         if (err) return res.status(500).json({ error: err.message });
-        if (result.length === 0) return res.status(404).json({ message: "Certificate not found" });
         res.json(result[0]);
     });
 });
