@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../assets/images/logo.png'
 
-const [Data, setData] = useState(null);
+export default function CertificatePage() {
 
+const [Data, setData] = useState(null);
 useEffect(() => {
-  fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+  fetch('https://certification-gs4h.onrender.com/verify/CERT12345')
      .then((response) => response.json())
      .then((data) => {
         console.log(data);
-        setPosts(data);
+        setData(data);
      })
      .catch((err) => {
         console.log(err.message);
      });
 }, []);
 
-export default function CertificatePage() {
+
   return (
     <div className='w-screen h-screen flex justify-center items-center' style={{ backgroundColor: "#e0e7ee" }}>
       <div className='w-[400px] h-[400px] bg-white shadow-lg shadow-outline m-10'>
