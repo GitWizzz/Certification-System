@@ -15,13 +15,12 @@ export default function CertificatePage() {
       fetch(`https://certification-gs4h.onrender.com/verify/${certificateNo}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setcertdata(data);
           setIsValidated(true);
         })
         .catch((err) => {
           console.log(err.message);
-          setcertdata({ error: "Failed to validate certificate" });
+          setcertdata({ error: "Failed to validate certificate or serial no is incorrect" });
           setIsValidated(true);
         });
     } else {
@@ -56,8 +55,8 @@ export default function CertificatePage() {
                   <p className="text-red-500">{certdata.error}</p>
                 ) : (
                   <>
-                    <p className="text-2xl font-semibold">Certificate Validation</p>
-                    <p className="text-lg mt-4">{certdata.error}</p>
+                    <p className="text-xl font-semibold text-green-500">Validation Successful</p>
+                    <p className="text-lg mt-4">The Certificate with serial number <strong>{certdata.serial_no}</strong> has been issued to <strong>{certdata.name}</strong> for the cource <strong>{certdata.course}</strong> on <strong>{certdata.date_of_certification.split('T')[0]}</strong></p>
                   </>
                 )}
                 <button
