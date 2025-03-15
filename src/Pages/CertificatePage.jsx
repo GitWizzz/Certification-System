@@ -36,7 +36,7 @@ export default function CertificatePage() {
             {!isValidated ? (
               <>
                 <div className="flex justify-center">
-                  <img className="w-24" src={logo} alt="" />
+                  <img className="w-28" src={logo} alt="" />
                 </div>
                 <p className="text-2xl flex justify-center">Verify a Certificate</p>
                 <div className="form-group flex-row justify-center">
