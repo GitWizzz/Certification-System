@@ -59,8 +59,7 @@ export default function CertificatePage() {
                     <p className="text-lg mt-4">The Certificate with serial number <strong>{certdata.serial_no}</strong> has been issued to <strong>{certdata.name}</strong> for the cource <strong>{certdata.course}</strong> on <strong>{certdata.date_of_certification.split('T')[0]}</strong></p>
                   </>
                 )}
-                <button
-                  className="mt-4 bg-blue-950 text-white rounded-md py-2 px-4"
+                <button className="mt-4 bg-blue-950 text-white rounded-md py-2 px-4"
                   onClick={() => {
                     setIsValidated(false);
                     setCertificateNo('');

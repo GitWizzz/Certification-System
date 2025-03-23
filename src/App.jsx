@@ -3,7 +3,6 @@ import CertificatePage from "./Pages/CertificatePage";
 
 const App = () => {
 
-
   return (
     <div>
       <CertificatePage/>
